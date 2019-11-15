@@ -5,17 +5,17 @@ import './App.css';
 import Head from './head';
 import Body from './contenido/body';
 import Bodydos from './contenido/bodydos';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect,SwitchProps } from 'react-router-dom';
 import Errores from "./contenido/errores";
 
 function App() {
   return (
+    <div className="App">
+ <Head></Head>
 
  <BrowserRouter>
-        <div className="App">
-<Head></Head>
-
-     <switch>
+   
+     <Switch>
        
         <Route
           path="/body"
@@ -24,14 +24,14 @@ function App() {
           path="/bodydos"
           component={Bodydos} />
           
-          <Route component={Errores} />
-      </switch>
-    </div>
+        <Route component={Errores} />
+      </Switch>
 
   </BrowserRouter>
     
       
  
+    </div>
   );
 }
 
